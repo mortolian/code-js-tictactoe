@@ -16,7 +16,6 @@ with as little or no css or js libraries.
 
 The game should work on all screen sizes and in most modern browsers.
 
-
 ## Contributions And Feedback
 
 The game is made for me to learn, therefor I am not adding in and contributions, but I do
