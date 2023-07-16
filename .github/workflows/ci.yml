@@ -24,7 +24,7 @@ jobs:
             -   name: Install modules
                 run: yarn
             -   name: Run ESLint
-                run: npx eslint ./js --ext .js
+                run: yarn eslint ./src/js --ext .js
     playwrite:
         needs: setup
         timeout-minutes: 60
