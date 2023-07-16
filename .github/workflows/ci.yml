@@ -24,7 +24,7 @@ jobs:
             -   name: Install modules
                 run: yarn
             -   name: Run ESLint
-                run: eslint src/ --ext .js
+                run: npx eslint ./js --ext .js
     playwrite:
         needs: setup
         timeout-minutes: 60
@@ -32,11 +32,9 @@ jobs:
         steps:
             -   name: Install Playwright Browsers
                 run: |
-                    cd src
                     npx playwright install --with-deps
             -   name: Run Playwright tests
                 run: |
-                    cd src
                     npx playwright test
             -   uses: actions/upload-artifact@v3
                 if: always()
