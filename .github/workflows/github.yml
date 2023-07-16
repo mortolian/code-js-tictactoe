@@ -1,4 +1,4 @@
-name: Deploy On Server
+name: Deploy On GitHub Pages
 on:
     workflow_run:
         workflows: [ CI Tests ]
@@ -16,7 +16,7 @@ jobs:
             -   uses: actions/setup-node@v3
                 with:
                     node-version: 16
-            -   name: Deploy To Github Pages
+            -   name: Deploy To GitHub Pages
                 uses: JamesIves/github-pages-deploy-action@v4
                 with:
                     folder: src
