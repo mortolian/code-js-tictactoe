@@ -1,0 +1,11 @@
+version: '3'
+services:
+    microservice:
+        image: tictactoe
+        build:
+            context: ./src
+            dockerfile: Dockerfile
+        container_name: tictactoe
+        ports:
+            - "3000:3000"
+        restart: always
