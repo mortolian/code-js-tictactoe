@@ -5,7 +5,21 @@ on:
     pull_request:
         branches: [ main, master ]
 jobs:
-    setup:
+    eslint:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v3
+            -   uses: actions/setup-node@v3
+                with:
+                    node-version: 16
+            -   run: npm ci
+            -   uses: sibiraj-s/action-eslint@v2
+                with:
+                    eslint-args: '--ignore-path=.gitignore --quiet'
+                    extensions: 'js,jsx,ts,tsx'
+                    annotations: true
+    playwrite:
+        timeout-minutes: 60
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
@@ -16,18 +30,6 @@ jobs:
                 run: |
                     cd src
                     npm ci
-    lint:
-        needs: setup
-        runs-on: ubuntu-latest
-        steps:
-            -   name: Run ESLint
-                run: |
-                    npx eslint ./js --ext .js
-    playwrite:
-        needs: setup
-        timeout-minutes: 60
-        runs-on: ubuntu-latest
-        steps:
             -   name: Install Playwright Browsers
                 run: |
                     cd src
