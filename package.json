@@ -1,0 +1,21 @@
+{
+    "name": "TicTacToe",
+    "version": "1.0.0",
+    "description": "Simple TicTacToe Game",
+    "main": "app.js",
+    "author": "Gideon Schoonbee",
+    "license": "GPL-3.0-or-later",
+    "scripts": {
+        "serve": "live-server --port=8080",
+        "playwright": "playwright test",
+        "vitest": "",
+        "lint": "eslint js/*.js"
+    },
+    "dependencies": {
+        "live-server": "1.2.1"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.36.1",
+        "eslint": "^8.45.0"
+    }
+}

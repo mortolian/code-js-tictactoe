@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+:root {
+    --main-background: #C81F2B;
+    --main-font-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: lighter;
+    background-color: var(--main-background);
+    color: var(--main-font-color);
+}
+
+#wrapper {
+    margin: auto auto;
+    width: 80vw;
+}
+
+header h1 {
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 8vw;
+    text-align: center;
+    margin: 10px;
+    animation: anime-header 1s ease-in forwards;
+}
+
+@keyframes anime-board {
+    0% {
+        filter: opacity(0%) blur(30px);
+    }
+    100% {
+    }
+}
+
+@keyframes anime-block {
+    0% {
+    }
+    100% {
+        transform: scale(1.1);
+        filter: opacity(1);
+    }
+}
+
+@keyframes anime-header {
+    0% {
+        transform: translateY(-1000px);
+    }
+    80% {
+        transform: translateY(40px);
+    }
+    100% {
+
+    }
+}
+
+#game {
+    position: relative;
+}
+
+#game #board {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 400px;
+    margin: auto auto;
+    animation: anime-board 500ms ease-in forwards;
+}
+
+#game #board .block {
+    position: relative;
+    background-color: rgba(255,255,255);
+    opacity: 0.3;
+    border-radius: 3px;
+    width: 100%;
+    height: calc(400px / 3);
+    transition: opacity 500ms;
+    /*animation: anime-block 1s ease backwards;*/
+}
+
+#game #board .block:hover {
+    opacity: 0.9;
+    transition: opacity 500ms;
+    /*animation: anime-block 1s ease forwards;*/
+}
+
+footer {
+    font-size: small;
+    margin: 20px 0;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    #wrapper {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 15vw;
+    }
+
+    #game #board {
+        max-width: 100%;
+    }
+
+    #game #board .block {
+        height: calc(100vw / 3);
+    }
+
+    footer {
+        text-align: center;
+    }
+}
