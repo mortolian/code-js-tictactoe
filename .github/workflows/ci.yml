@@ -22,7 +22,6 @@ jobs:
         steps:
             -   name: Run ESLint
                 run: |
-                    cd src
                     npx eslint ./js --ext .js
     playwrite:
         needs: setup
