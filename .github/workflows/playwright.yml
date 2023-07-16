@@ -15,6 +15,7 @@ jobs:
         node-version: 16
     - name: Install dependencies
       run: |
+        cd src
         npm ci
     - name: Install Playwright Browsers
       run: | 
