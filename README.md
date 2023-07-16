@@ -1,8 +1,7 @@
 # TicTacToe Game
 
-This is a simple JavaScript based TicTacToe game. 
-The game is created as a code challenge. It is written from the ground up
-with as little or no css or js libraries.
+This is a simple `HTML`, `CSS`, `JavaScript` based TicTacToe game. <br> 
+The game is created as a code challenge.
 
 ## Demo
 
@@ -23,6 +22,44 @@ git clone https://github.com/mortolian/code-js-tictactoe.git .
 ```bash
 npm install --global yarn
 ```
+For more installation information, [Yarn Install Manual](https://classic.yarnpkg.com/lang/en/docs/install/).
+
+### Run Directly On Host
+
+From the root of the project run the following commands. 
+I personally use NPM, because I have not had a need to use anything else.
+
+#### NPM
+
+```bash
+cd src
+npm install
+npm run watch
+```
+
+#### YARN
+
+```bash
+cd src
+yarn install
+yarn run watch
+```
+
+### Local Docker Developer Setup
+
+- http://localhost:8080
+- http://127.0.0.1:8080
+
+```bash
+```
+
+Install Docker Desktop [Mac](https://docs.docker.com/desktop/install/mac-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/), [Linux](https://docs.docker.com/desktop/install/linux-install/)
+
+## Run Tests
+
+### End-To-End Tests
+
+### Unit Tests
 
 ## Compatibility
 
@@ -32,6 +69,12 @@ The game should work on all screen sizes and in most modern browsers.
 
 The game is made for me to learn, therefor I am not adding in and contributions, but I do
 welcome any feedback through Github.
+
+## References
+
+- https://github.com/tapio/live-server#readme
+- https://nodejs.org/ja/blog/release/v16.16.0
+- https://github.com/nvm-sh/nvm
 
 ## License
 
