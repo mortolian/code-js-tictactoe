@@ -29,10 +29,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   name: Install Playwright Browsers
-                run: npx playwright install --with-deps
+                run: |
+                    cd src
+                    npx playwright install --with-deps
             -   name: Run Playwright tests
                 run: |
                     npm install -D @playwright/test
+                    cd src
                     npx playwright test
             -   uses: actions/upload-artifact@v3
                 if: always()
