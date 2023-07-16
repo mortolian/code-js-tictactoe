@@ -1,0 +1,15 @@
+{
+    "name": "TicTacToe",
+    "version": "1.0.0",
+    "description": "Simple TicTacToe Game",
+    "main": "app.js",
+    "author": "Gideon Schoonbee",
+    "license": "GPL-3.0-or-later",
+    "scripts": {
+        "watch": "live-server",
+        "serve": "live-server"
+    },
+    "dependencies": {
+        "live-server": "^1.1.0"
+    }
+}

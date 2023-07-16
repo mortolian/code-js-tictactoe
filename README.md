@@ -6,11 +6,23 @@ with as little or no css or js libraries.
 
 ## Demo
 
-
+[Github Page Demo Site](https://mortolian.github.io/code-js-tictactoe/)
 
 ## Setup
 
+### Clone The Repo
 
+```bash
+mkdir code-js-tictactoe
+cd code-js-tictactoe
+git clone https://github.com/mortolian/code-js-tictactoe.git .
+```
+
+### Install Yarn Node Package Manager Globally
+
+```bash
+npm install --global yarn
+```
 
 ## Compatibility
 
