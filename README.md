@@ -71,46 +71,50 @@ cd src
 yarn run playwright
 ```
 
-```text
-Inside that directory, you can run several commands:
+or
 
-  npx playwright test
-    Runs the end-to-end tests.
-
-  npx playwright test --ui
-    Starts the interactive UI mode.
-
-  npx playwright test --project=chromium
-    Runs the tests only on Desktop Chrome.
-
-  npx playwright test example
-    Runs the tests in a specific file.
-
-  npx playwright test --debug
-    Runs the tests in debug mode.
-
-  npx playwright codegen
-    Auto generate tests with Codegen.
-
-We suggest that you begin by typing:
-
-    npx playwright test
-
-And check out the following files:
-  - ./tests/example.spec.js - Example end-to-end test
-  - ./tests-examples/demo-todo-app.spec.js - Demo Todo App end-to-end tests
-  - ./playwright.config.js - Playwright Test configuration
-
-Visit https://playwright.dev/docs/intro for more information. ✨
-
+```bash
+cd src
+npx playwright test
 ```
 
+Runs the end-to-end tests.
+
+```bash
+npx playwright test
+```
+
+Starts the interactive UI mode.
+
+```bash
+npx playwright test --ui
+```  
+
+Runs the tests only on Desktop Chrome.
+
+```bash
+npx playwright test --project=chromium
+```
+
+Runs the tests in a specific file.
+
+```bash
+npx playwright test example
+```
+
+Runs the tests in debug mode.
+
+```bash
+npx playwright test --debug
+```
+Auto generate tests with Codegen.
+
+```bash
+npx playwright codegen
+```
+Visit https://playwright.dev/docs/intro for more information.
 
 ### Unit Tests
-
-## Compatibility
-
-The game should work on all screen sizes and in most modern browsers.
 
 ## Contributions And Feedback
 
