@@ -21,7 +21,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   name: Run ESLint
-                run: npx eslint ./js --ext .js
+                run: |
+                    cd src
+                    npx eslint ./js --ext .js
     playwrite:
         needs: setup
         timeout-minutes: 60
@@ -30,7 +32,9 @@ jobs:
             -   name: Install Playwright Browsers
                 run: npx playwright install --with-deps
             -   name: Run Playwright tests
-                run: npx playwright test
+                run: |
+                    npm install -D @playwright/test
+                    npx playwright test
             -   uses: actions/upload-artifact@v3
                 if: always()
                 with:
