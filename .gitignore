@@ -7,6 +7,9 @@ node_modules
 # Thumbnails
 ._*
 
+# Yarn
+yarn-error.log
+
 # PHPStorm
 .idea/
 .idea_modules/
