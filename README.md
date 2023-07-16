@@ -57,7 +57,19 @@ Install Docker Desktop [Mac](https://docs.docker.com/desktop/install/mac-install
 
 ## Run Tests
 
+### Eslint
+
+```bash
+cd src
+yarn run lint
+```
+
 ### End-To-End Tests
+
+```bash
+cd src
+yarn run playwright
+```
 
 ```text
 Inside that directory, you can run several commands:
