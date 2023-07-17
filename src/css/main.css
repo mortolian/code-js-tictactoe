@@ -9,7 +9,7 @@
 
 * {
     box-sizing: border-box;
-    cursor: url("/images/o-100.png"), auto;
+    cursor: url("../images/o-100.png") 25 25, auto;
 }
 
 html, body {
