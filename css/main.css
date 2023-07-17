@@ -31,33 +31,27 @@ header h1 {
     animation: anime-header 1s ease-in forwards;
 }
 
-@keyframes anime-board {
-    0% {
-        filter: opacity(0%) blur(30px);
-    }
-    100% {
-    }
+#control {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 15px auto;
+    max-width: 400px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
 }
 
-@keyframes anime-block {
-    0% {
-    }
-    100% {
-        transform: scale(1.1);
-        filter: opacity(1);
-    }
-}
-
-@keyframes anime-header {
-    0% {
-        transform: translateY(-1000px);
-    }
-    80% {
-        transform: translateY(40px);
-    }
-    100% {
-
-    }
+#control .part {
+    justify-content: center;
+    flex-grow: 1;
+    gap: 3px;
+    padding: 10px;
+    margin: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #000;
+    text-align: center;
 }
 
 #game {
@@ -91,8 +85,45 @@ header h1 {
 }
 
 footer {
+    text-align: center;
     font-size: small;
     margin: 20px 0;
+}
+
+footer div {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 20px;
+}
+
+/* Animation */
+@keyframes anime-board {
+    0% {
+        filter: opacity(0%) blur(30px);
+    }
+    100% {
+    }
+}
+
+@keyframes anime-block {
+    0% {
+    }
+    100% {
+        transform: scale(1.1);
+        filter: opacity(1);
+    }
+}
+
+@keyframes anime-header {
+    0% {
+        transform: translateY(-1000px);
+    }
+    80% {
+        transform: translateY(40px);
+    }
+    100% {
+
+    }
 }
 
 /* Mobile */
