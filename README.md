@@ -45,14 +45,6 @@ yarn install
 yarn run watch
 ```
 
-### Local Docker Developer Setup
-
-- http://localhost:8080
-- http://127.0.0.1:8080
-
-```bash
-```
-
 Install Docker Desktop [Mac](https://docs.docker.com/desktop/install/mac-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/), [Linux](https://docs.docker.com/desktop/install/linux-install/)
 
 ## Run Tests
