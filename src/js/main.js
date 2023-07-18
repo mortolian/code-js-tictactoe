@@ -13,7 +13,7 @@ const togglePlayer = function () {
 // Toggle the cursor
 const toggleCursor = function () {
     blocks.forEach(block => {
-        block.style.cursor = "url('../images/" + playerTurn + "-100.png') 25 25, auto";
+        block.style.cursor = "url('../images/" + playerTurn + "-100.png') 25 25, url('images/" + playerTurn + "-100.png') 25 25, auto";
     });
 }
 
@@ -33,6 +33,7 @@ const announceOutcome = function(message) {
     outcomeElm.innerText = message;
     outcomeElm.classList.add('display');
     blocks.forEach(block => {
+        console.log('reset cursor');
         block.style.cursor = 'default';
         block.replaceWith(block.cloneNode(true));
     });
