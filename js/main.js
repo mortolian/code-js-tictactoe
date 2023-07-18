@@ -7,6 +7,7 @@ let playerTurn = 'x';
 // Toggle the player
 const togglePlayer = function () {
     playerTurn = playerTurn === 'x' ? 'o' : 'x';
+    toggleUserTurnIndicator(playerTurn);
 }
 
 // Toggle the cursor
@@ -21,7 +22,6 @@ const drawOn = function (event) {
     event.target.innerHTML = "<img src='images/" + playerTurn + "-100.png'/>";
     event.target.dataset.assignment = playerTurn;
     event.target.removeEventListener('click', drawOn);
-    toggleUserTurnIndicator();
     togglePlayer();
     toggleCursor();
     gameStateCheck();
@@ -39,8 +39,8 @@ const announceOutcome = function(message) {
 }
 
 // Toggle user turn indicator
-const toggleUserTurnIndicator = function() {
-    const playerElm = document.querySelector('#' + playerTurn + '-player');
+const toggleUserTurnIndicator = function(player) {
+    const playerElm = document.querySelector('#' + player + '-player');
     const playerElms = document.querySelectorAll('#control .part');
     playerElms.forEach(elm => elm.classList.remove('selected'));
     playerElm.classList.add('selected');
