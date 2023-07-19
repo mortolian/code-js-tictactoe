@@ -8,7 +8,8 @@
     "scripts": {
         "serve": "live-server --port=8080",
         "playwright": "playwright test",
-        "vitest": "",
+        "vitest": "vitest",
+        "vitest-coverage": "vitest run --coverage",
         "lint": "eslint js/*.js"
     },
     "dependencies": {
@@ -16,6 +17,7 @@
     },
     "devDependencies": {
         "@playwright/test": "^1.36.1",
-        "eslint": "^8.45.0"
+        "eslint": "^8.45.0",
+        "vitest": "^0.33.0"
     }
 }

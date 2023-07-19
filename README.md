@@ -108,6 +108,16 @@ Visit https://playwright.dev/docs/intro for more information.
 
 ### Unit Tests
 
+```bash
+yarn run vitest
+```
+
+```bash
+yarn run vitest-coverage
+```
+
+Visit https://vitest.dev/guide/ for more information.
+
 ## Contributions And Feedback
 
 The game is made for me to learn, therefor I am not adding in and contributions, but I do
