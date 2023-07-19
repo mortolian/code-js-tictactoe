@@ -1,5 +1,3 @@
-console.log('TicTacToe Logic Loaded...');
-
 let blocks = document.querySelectorAll('.block');
 let resetButton = document.querySelector('#reset');
 let playerTurn = 'x';
@@ -33,7 +31,6 @@ const announceOutcome = function(message) {
     outcomeElm.innerText = message;
     outcomeElm.classList.add('display');
     blocks.forEach(block => {
-        console.log('reset cursor');
         block.style.cursor = 'default';
         block.replaceWith(block.cloneNode(true));
     });
@@ -110,3 +107,8 @@ blocks.forEach(block => {
 
 // Add event listener for reset button
 resetButton.addEventListener('click', resetGame);
+
+// IIFE
+(() => {
+    console.log('TicTacToe Logic Loaded...');
+})();
