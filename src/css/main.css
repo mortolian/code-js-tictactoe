@@ -135,6 +135,11 @@ footer div {
     padding: 20px;
 }
 
+footer .github img {
+    width: 50px;
+    filter: invert(100%);
+}
+
 /* Animation */
 @keyframes anime-board {
     0% {
