@@ -28,6 +28,7 @@ jobs:
         steps:
             -   name: Install dependencies
                 run: |
+                    ls -la
                     cd src
                     npm ci
             -   name: Run Vitest tests
