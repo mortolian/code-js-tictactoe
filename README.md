@@ -26,9 +26,6 @@ For more installation information, [Yarn Install Manual](https://classic.yarnpkg
 
 ### Run Directly On Host
 
-From the root of the project run the following commands. 
-I personally use NPM, because I have not had a need to use anything else.
-
 #### NPM
 
 ```bash
@@ -41,11 +38,9 @@ npm run watch
 
 ```bash
 cd src
-yarn install
+yarn
 yarn run watch
 ```
-
-Install Docker Desktop [Mac](https://docs.docker.com/desktop/install/mac-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/), [Linux](https://docs.docker.com/desktop/install/linux-install/)
 
 ## Run Tests
 
@@ -69,44 +64,16 @@ or
 cd src
 npx playwright test
 ```
-
-Runs the end-to-end tests.
-
-```bash
-npx playwright test
-```
-
-Starts the interactive UI mode.
-
-```bash
-npx playwright test --ui
-```  
-
-Runs the tests only on Desktop Chrome.
-
-```bash
-npx playwright test --project=chromium
-```
-
-Runs the tests in a specific file.
-
-```bash
-npx playwright test example
-```
-
-Runs the tests in debug mode.
-
-```bash
-npx playwright test --debug
-```
-Auto generate tests with Codegen.
-
-```bash
-npx playwright codegen
-```
-Visit https://playwright.dev/docs/intro for more information.
+- [Playwright Additional Commands](documentation%2Fplaywright.md)
+- Visit https://playwright.dev/docs/intro for more information.
 
 ### Unit Tests
+
+At this point of the project it is built in plain JavaScript and not ECMA.
+This means that there are no unit testing available at this time.
+
+TODO: Rebuild in VITE and ECMA to facilitate the ability to unit test
+ECMAScript.
 
 ```bash
 yarn run vitest
@@ -116,18 +83,20 @@ yarn run vitest
 yarn run vitest-coverage
 ```
 
-Visit https://vitest.dev/guide/ for more information.
+- Visit https://vitest.dev/guide/ for more information.
 
 ## Contributions And Feedback
 
 The game is made for me to learn, therefor I am not adding in and contributions, but I do
-welcome any feedback through Github.
+welcome any feedback through GitHub.
 
 ## References
 
 - https://github.com/tapio/live-server#readme
 - https://nodejs.org/ja/blog/release/v16.16.0
 - https://github.com/nvm-sh/nvm
+- https://vitest.dev
+- https://playwright.dev
 
 ## License
 
