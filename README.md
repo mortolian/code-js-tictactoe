@@ -1,6 +1,6 @@
 # TicTacToe Game
 
-This is a simple `HTML`, `CSS`, `JavaScript` based TicTacToe game. <br> 
+This is a simple `HTML`, `CSS`, `ECMA/Vite` based TicTacToe game. <br> 
 The game is created as a code challenge.
 
 ## Demo
@@ -29,17 +29,15 @@ For more installation information, [Yarn Install Manual](https://classic.yarnpkg
 #### NPM
 
 ```bash
-cd src
 npm install
-npm run watch
+npm run dev
 ```
 
 #### YARN
 
 ```bash
-cd src
 yarn
-yarn run watch
+yarn dev
 ```
 
 ## Run Tests
@@ -47,21 +45,18 @@ yarn run watch
 ### Eslint
 
 ```bash
-cd src
-yarn run lint
+yarn lint
 ```
 
 ### End-To-End Tests
 
 ```bash
-cd src
-yarn run playwright
+yarn playwright
 ```
 
 or
 
 ```bash
-cd src
 npx playwright test
 ```
 - [Playwright Additional Commands](documentation%2Fplaywright.md)
@@ -76,7 +71,7 @@ TODO: Rebuild in VITE and ECMA to facilitate the ability to unit test
 ECMAScript.
 
 ```bash
-yarn run vitest
+yarn vitest
 ```
 
 ```bash

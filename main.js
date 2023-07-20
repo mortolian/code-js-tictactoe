@@ -1,14 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <title>TicTacToe</title>
-</head>
-<body>
+import './style.css'
+import { setupCounter } from './counter.js'
+import './tictactoe.js'
+
+document.querySelector('#app').innerHTML = `
 <div id="wrapper">
     <header id="header">
         <h1>TicTacToe</h1>
@@ -55,7 +49,6 @@
         </div>
         <div>Copyright &copy; 2023 Mortolian</div>
     </footer>
-</div>
-</body>
-<script type="application/javascript" src="js/main.js"></script>
-</html>
+`
+
+setupCounter(document.querySelector('#counter'))
