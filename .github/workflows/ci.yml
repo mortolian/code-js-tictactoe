@@ -5,27 +5,25 @@ on:
     pull_request:
         branches: [ main, master ]
 jobs:
-    setup:
+    eslint:
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
             -   uses: actions/setup-node@v3
                 with:
                     node-version: 16
-
-    eslint:
-        needs: setup
-        runs-on: ubuntu-latest
-        steps:
             -   uses: sibiraj-s/action-eslint@v2
                 with:
                     eslint-args: '--ignore-path=.gitignore --quiet'
                     extensions: 'js,jsx,ts,tsx'
                     annotations: true
     vitest:
-        needs: setup
         runs-on: ubuntu-latest
         steps:
+            -   uses: actions/checkout@v3
+            -   uses: actions/setup-node@v3
+                with:
+                    node-version: 16
             -   name: Install dependencies
                 run: |
                     ls -la
@@ -36,10 +34,13 @@ jobs:
                     cd src
                     npx vitest test
     playwrite:
-        needs: setup
         timeout-minutes: 60
         runs-on: ubuntu-latest
         steps:
+            -   uses: actions/checkout@v3
+            -   uses: actions/setup-node@v3
+                with:
+                    node-version: 16
             -   name: Install dependencies
                 run: |
                     cd src
