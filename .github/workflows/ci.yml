@@ -12,8 +12,7 @@ jobs:
             -   name: Install modules
                 run: yarn
             -   name: Run ESLint
-                run: eslint . --ext .js,.jsx,.ts,.tsx
-
+                run: yarn lint
     vitest:
         runs-on: ubuntu-latest
         steps:
