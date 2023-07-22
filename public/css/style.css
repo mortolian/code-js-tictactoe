@@ -17,7 +17,7 @@ html, body {
     font-family: sans-serif;
     font-weight: lighter;
     background-color: var(--main-background);
-    background-image: url("/images/background.svg"), url("images/background.svg");
+    background-image: url("../images/background.svg"), url("/images/background.svg");
     background-size: cover;
     background-repeat: no-repeat;
     color: var(--main-font-color);

@@ -51,7 +51,7 @@ yarn lint
 ### End-To-End Tests
 
 ```bash
-yarn playwright
+yarn test:playwright
 ```
 
 or
@@ -71,11 +71,11 @@ TODO: Rebuild in VITE and ECMA to facilitate the ability to unit test
 ECMAScript.
 
 ```bash
-yarn vitest
+yarn test:vitest
 ```
 
 ```bash
-yarn run vitest-coverage
+yarn test:vitest-coverage
 ```
 
 - Visit https://vitest.dev/guide/ for more information.
@@ -92,6 +92,7 @@ welcome any feedback through GitHub.
 - https://github.com/nvm-sh/nvm
 - https://vitest.dev
 - https://playwright.dev
+- https://vitejs.dev/
 
 ## License
 
