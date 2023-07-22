@@ -6,7 +6,7 @@ document.querySelector('#app').innerHTML = `
 <div id="wrapper">
     ${header}
     <div id="tictactoe"></div>
-    ${footer} 
+    ${footer}
 </div>
 `
 

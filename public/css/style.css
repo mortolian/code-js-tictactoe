@@ -2,7 +2,7 @@
 
 /* CSS General */
 :root {
-    --main-background: #C81F2B;
+    --main-background: #AA2903;
     --main-font-color: #fff;
 }
 
@@ -17,12 +17,15 @@ html, body {
     font-family: sans-serif;
     font-weight: lighter;
     background-color: var(--main-background);
+    background-image: url("/images/background.svg"), url("images/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--main-font-color);
 }
 
-/* Helpers */
-.cursor-pointer {
-    cursor: pointer;
+a,
+a:visited {
+    color: var(--main-font-color);
 }
 
 /* Layout */
@@ -32,94 +35,11 @@ html, body {
 }
 
 header h1 {
-    font-family: 'Rubik Dirt', cursive;
+    font-family: "Rubik Dirt", sans-serif;
     font-size: 8vw;
     text-align: center;
     margin: 10px;
     animation: anime-header 1s ease-in forwards;
-}
-
-#control {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 15px auto 15px auto;
-    max-width: 400px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 10px;
-    gap: 3px;
-}
-
-#control .part {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding: 10px;
-    border-radius: 5px;
-    color: #000;
-}
-
-#control .selected {
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-#control .part img {
-    height: 30px;
-}
-
-#control .reset {
-    cursor: pointer;
-    background-color: #ffffff;
-}
-
-.outcome.display {
-    margin: 15px auto 15px auto;
-    max-width: 400px;
-    padding:20px;
-    border-radius: 8px;
-    background-color: rgba(255,255,255,0.3);
-    text-align: center;
-}
-
-#game {
-    position: relative;
-}
-
-#game #board {
-    display: grid;
-    gap: 1px;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 400px;
-    margin: auto auto;
-    animation: anime-board 500ms ease-in forwards;
-}
-
-#game #board .block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: rgba(255,255,255, 0.3);
-    border-radius: 3px;
-    width: 100%;
-    height: calc(400px / 3);
-    transition: background-color 500ms;
-    cursor: url("/images/x-100.png") 25 25, auto;
-}
-
-#game #board .block:hover {
-    background-color: rgba(255,255,255, 0.9);
-    transition: background-color 500ms;
-}
-
-#game #board .block img {
-    opacity: 1;
-    width: 50%;
-    height: 50%;
 }
 
 footer {
@@ -140,14 +60,6 @@ footer .github img {
 }
 
 /* Animation */
-@keyframes anime-board {
-    0% {
-        filter: opacity(0%) blur(30px);
-    }
-    100% {
-    }
-}
-
 @keyframes anime-block {
     0% {
     }
@@ -177,18 +89,6 @@ footer .github img {
 
     header h1 {
         font-size: 15vw;
-    }
-
-    #game #board {
-        max-width: 100%;
-    }
-
-    #game #board .block {
-        height: calc(100vw / 3);
-    }
-
-    #game #board .block:hover {
-        background-color: rgba(255,255,255, 0.3);
     }
 
     footer {

@@ -7,7 +7,10 @@ export default defineConfig(({command, mode, ssrBuild}) => {
                 loglevel: 'error',
                 server: {
                     port: '8080',
-                    open: '/',
+                    open: '/code-js-tictactoe/',
+                },
+                preview: {
+                    port: '8080',
                 }
             }
         }
@@ -18,9 +21,6 @@ export default defineConfig(({command, mode, ssrBuild}) => {
             server: {
                 port: '8080',
                 open: '/',
-            },
-            preview: {
-                port: '8080'
             }
         }
     }

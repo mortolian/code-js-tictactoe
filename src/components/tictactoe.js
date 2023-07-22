@@ -1,10 +1,12 @@
+import '../assets/css/tictactoe.component.css';
+
 const gameboardHtml = `
     <section id="control">
         <div id="x-player" class="part selected">
-            <img src="/images/x-50.png" alt="X Player"/>
+            <img src="images/x-50.png" alt="X Player"/>
         </div>
         <div id="o-player" class="part">
-            <img src="/images/o-50.png" alt="O Player"/>
+            <img src="images/o-50.png" alt="O Player"/>
         </div>
         <div id="reset" class="part reset cursor-pointer">
             <span>New Game</span>
@@ -12,7 +14,7 @@ const gameboardHtml = `
     </section>
     <section id="outcome" class="outcome"></section>    
     <section id="game">
-        <div id="board">
+        <div id="board" style="box-shadow: 0px 20px 40px -25px rgb(127, 3, 12, 1);">
             <div id="block-0" class="block"></div>
             <div id="block-1" class="block"></div>
             <div id="block-2" class="block"></div>
@@ -108,9 +110,7 @@ const drawOnBlock = function (event) {
     image.alt = activePlayer;
     event.target.appendChild(image);
     event.target.dataset.assignment = activePlayer;
-
     event.target.removeEventListener('click', drawOnBlock);
-
     activePlayer = togglePlayer(activePlayer);
     toggleMouseCursorStyle(activePlayer);
     toggleUserTurnIndicator();
