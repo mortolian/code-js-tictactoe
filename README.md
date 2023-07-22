@@ -64,12 +64,6 @@ npx playwright test
 
 ### Unit Tests
 
-At this point of the project it is built in plain JavaScript and not ECMA.
-This means that there are no unit testing available at this time.
-
-TODO: Rebuild in VITE and ECMA to facilitate the ability to unit test
-ECMAScript.
-
 ```bash
 yarn test:vitest
 ```
