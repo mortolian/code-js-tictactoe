@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+/* CSS General */
+:root {
+    --main-background: #AA2903;
+    --main-font-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: sans-serif;
+    font-weight: lighter;
+    background-color: var(--main-background);
+    background-image: url("../images/background.svg"), url("/images/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--main-font-color);
+}
+
+a,
+a:visited {
+    color: var(--main-font-color);
+}
+
+/* Layout */
+#wrapper {
+    margin: auto auto;
+    width: 80vw;
+}
+
+header h1 {
+    font-family: "Rubik Dirt", sans-serif;
+    font-size: 8vw;
+    text-align: center;
+    margin: 10px;
+    animation: anime-header 1s ease-in forwards;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+    margin: 20px 0;
+}
+
+footer div {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 20px;
+}
+
+footer .github img {
+    width: 50px;
+    filter: invert(100%);
+}
+
+/* Animation */
+@keyframes anime-block {
+    0% {
+    }
+    100% {
+        transform: scale(1.1);
+        filter: opacity(1);
+    }
+}
+
+@keyframes anime-header {
+    0% {
+        transform: translateY(-1000px);
+    }
+    80% {
+        transform: translateY(40px);
+    }
+    100% {
+
+    }
+}
+
+/* Screen Sizes */
+@media only screen and (max-width: 768px) {
+    #wrapper {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 15vw;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
