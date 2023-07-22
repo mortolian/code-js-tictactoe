@@ -9,14 +9,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v3
-            -   uses: actions/setup-node@v3
-                with:
-                    node-version: 16
-            -   uses: sibiraj-s/action-eslint@v2
-                with:
-                    eslint-args: '--ignore-path=.gitignore --quiet'
-                    extensions: 'js,jsx,ts,tsx'
-                    annotations: true
+            -   name: Install modules
+                run: yarn
+            -   name: Run ESLint
+                run: eslint . --ext .js,.jsx,.ts,.tsx`
+
     vitest:
         runs-on: ubuntu-latest
         steps:
