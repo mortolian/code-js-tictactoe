@@ -33,14 +33,14 @@ module.exports = defineConfig({
     ],
 
     webServer: {
-        command: 'npm run serve',
-        url: 'http://127.0.0.1:8080',
+        command: 'npm run dev',
+        url: 'http://localhost:8080',
         reuseExistingServer: !process.env.CI,
         stdout: 'ignore',
         stderr: 'pipe',
     },
     use: {
-        baseURL: 'http://127.0.0.1:8080',
+        baseURL: 'http://localhost:8080',
         trace: 'on-first-retry',
     },
 });

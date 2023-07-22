@@ -10,7 +10,7 @@
     "test:playwright": "playwright test",
     "test:vitest": "vitest",
     "test:vitest-coverage": "vitest run --coverage",
-    "lint": "eslint js/*.js"
+    "lint": "eslint tictactoe/*.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.36.1",

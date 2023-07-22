@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 
 /* CSS General */
-
 :root {
     --main-background: #C81F2B;
     --main-font-color: #fff;
@@ -109,7 +108,7 @@ header h1 {
     width: 100%;
     height: calc(400px / 3);
     transition: background-color 500ms;
-    cursor: url("../images/x-100.png") 25 25, url("images/x-100.png") 25 25, auto;
+    cursor: url("/images/x-100.png") 25 25, auto;
 }
 
 #game #board .block:hover {
