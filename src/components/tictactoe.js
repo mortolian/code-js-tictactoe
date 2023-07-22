@@ -1,4 +1,6 @@
 import '../assets/css/tictactoe.component.css';
+import placeAudio from '../assets/audio/place.wav'
+import announceAudio from '../assets/audio/announce.wav'
 
 const gameboardHtml = `
     <section id="control">
@@ -56,6 +58,7 @@ const announceOutcome = function (message) {
         block.style.cursor = 'default';
         block.replaceWith(block.cloneNode(true));
     });
+    playSound(announceAudio);
 };
 
 const roundsPlayed = function () {
@@ -104,6 +107,10 @@ const gameStateCheck = function () {
     }
 };
 
+const playSound = function(audioFile) {
+    new Audio(audioFile).play();
+};
+
 const drawOnBlock = function (event) {
     let image = document.createElement('img');
     image.src = `images/${activePlayer}-100.png`;
@@ -111,6 +118,7 @@ const drawOnBlock = function (event) {
     event.target.appendChild(image);
     event.target.dataset.assignment = activePlayer;
     event.target.removeEventListener('click', drawOnBlock);
+    playSound(placeAudio);
     activePlayer = togglePlayer(activePlayer);
     toggleMouseCursorStyle(activePlayer);
     toggleUserTurnIndicator();
